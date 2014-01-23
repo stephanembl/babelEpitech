@@ -1,0 +1,27 @@
+﻿Build started 18/12/2013 03:28:35.
+     1>Project "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\BabelTest.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\BabelTest.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\speex" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AudioManager.cpp main.cpp
+         main.cpp
+         AudioManager.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.exe" /NOLOGO "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\\portaudio_x86.lib" "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\\opus.lib" "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\\celt.lib" "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\\silk_common.lib" "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\\silk_float.lib" "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\\silk_fixed.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\BabelTest.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.lib" /MACHINE:X86 Debug\EncodeManager.obj
+         Debug\AudioManager.obj
+         Debug\main.obj
+         LINK : C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.exe not found or not built by the last incremental link; performing full link
+            Creating library C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.lib and object C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.exp
+     1>LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+         BabelTest.vcxproj -> C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\Debug\BabelTest.exe;#1" /manifest Debug\BabelTest.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\BabelTest.unsuccessfulbuild".
+         Touching "Debug\BabelTest.lastbuildstate".
+     1>Done Building Project "C:\Users\Stephane\Documents\Visual Studio 2010\Projects\babibel\client\portaudio_mombul\BabelTest\BabelTest\BabelTest.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.47

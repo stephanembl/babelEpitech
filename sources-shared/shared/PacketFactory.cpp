@@ -1,0 +1,63 @@
+#include	"../headers-shared/shared/PacketFactory.h"
+
+PacketFactory::PacketFactory()
+{
+  this->_current = 0;
+}
+
+PacketFactory::~PacketFactory()
+{
+}
+
+bool			PacketFactory::feed(const char *data, unsigned int size)
+{
+  char			header[Packet::HEADER_SIZE];
+  char			*packet;
+  bool			cont = true;
+
+  this->_buff.write(data, size);
+  while (cont)
+    {
+      if (this->_buff.getReadable() >= Packet::HEADER_SIZE)
+	{
+	  if (this->_current == 0)
+	    this->_current = new Packet();
+	  this->_buff.readNoModify(header, Packet::HEADER_SIZE);
+	  this->_current->header(header);
+	  if (this->_current->getMagicNumber() != Packet::MAGIC_NUMBER)
+	    {
+	      if (this->_current != 0)
+		{
+		  delete this->_current;
+		  this->_current = 0;
+		}
+	      return false;
+	    }
+	  if (this->_current->size() <= (unsigned int)this->_buff.getReadable())
+	    {
+	      packet = new char[this->_current->size()];
+	      this->_buff.read(packet, this->_current->size());
+	      this->_current->deserialize(packet);
+	      delete packet;
+	      this->_packet.push(this->_current);
+	      this->_current = 0;
+	      cont = true;
+	      continue;
+	    }
+	  cont = false;
+	}
+      cont = false;
+    }
+  return (true);
+}
+
+Packet			*PacketFactory::getPacket()
+{
+  Packet		*packet;
+
+  if (this->_packet.empty())
+    return (0);
+  packet = this->_packet.front();
+  this->_packet.pop();
+  return (packet);
+}
